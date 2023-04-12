@@ -8,18 +8,25 @@ const controls = document.querySelector("#controls");
 const buttonCreate = controls.querySelector("button[data-create]");
 const buttonDestroy = controls.querySelector("button[data-destroy]");
 const boxesContainer = document.querySelector("#boxes");
-const amount = controls.querySelector("input").value;
 
 buttonCreate.addEventListener("click", createBoxes);
 
-function createBoxes(amount) {
+function createBoxes() {
+  const amount = parseInt(controls.querySelector("input").value);
   let boxSize = 30;
   for (let i = 0; i < amount; i++) {
     const box = document.createElement("div");
-    box.style.width = boxSize;
-    box.style.height = boxSize;
+    box.style.width = boxSize + "px";
+    box.style.height = boxSize + "px";
     box.style.backgroundColor = getRandomHexColor();
     boxesContainer.append(box);
     boxSize += 10;
   }
+}
+
+buttonDestroy.addEventListener("click", destroyBoxes);
+
+function destroyBoxes() {
+  boxesContainer.remove("div");
+  amount.reset();
 }

@@ -1,10 +1,11 @@
-const categoryList = document.querySelector("#categories");
-const categoryItems = categoryList.querySelectorAll("li.item");
-console.log(`Number of categories: ${categoryItems.length}`);
+const categoryList = document.querySelector("#categories"); // Selects the element with id "categories" from the DOM tree
+const categoryItems = categoryList.querySelectorAll("li.item"); // Selects all the <li> elements with class "item" inside the "categories" element
+console.log(`Number of categories: ${categoryItems.length}`); // Logs the number of selected <li> elements
 
 categoryItems.forEach((item) => {
-  const headline = item.querySelector("h2");
-  const categoryItemsCount = item.querySelectorAll("li");
-  console.log(`Category: ${headline.textContent}`);
-  console.log(`Elements: ${categoryItemsCount.length}`);
+  // Iterates over each <li> element
+  const headline = item.querySelector("h2"); // Gets h2 for every <li> element with class "item"
+  const categoryItemsCount = item.querySelectorAll("li"); // Gets number of <li> inside <li> element with class "item"
+  console.log(`Category: ${headline.textContent}`); // Logs text content inside h2 element
+  console.log(`Elements: ${categoryItemsCount.length}`); // Logs number of <li> elements for every h2 element
 });
