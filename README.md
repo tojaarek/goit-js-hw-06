@@ -2,12 +2,12 @@ Live preview https://tojaarek.github.io/goit-js-hw-06/
 
 # Task 1
 
-In HTML, there is a list of categories, ul categories.
+In HTML, there is a list of categories, ul#categories.
 
 Write a script that:
 
-1. Will count and display in the console the number of categories in ul categories, that is, li.item elements.
-2. For each li.item element in the ul categories list, will find and display in the console the element header text (<h2> tag) and the number of elements in the category (all nested <li>).
+1. Will count and display in the console the number of categories in ul#categories, that is, li.item elements.
+2. For each li.item element in the ul#categories list, will find and display in the console the element header text h2 tag and the number of elements in the category (all nested li).
 
 As a result, the following messages will be displayed in the console:
 
@@ -24,7 +24,7 @@ Elements: 5
 
 # Task 2
 
-In HTML, there is an empty ul ingredients list.
+In HTML, there is an empty ul#ingredients list.
 In JavaScript, there is an array of strings.
 
 Write a script that, for each element in the ingredients array:
@@ -32,7 +32,7 @@ Write a script that, for each element in the ingredients array:
 1. Will create a separate <li> element. Be sure to use the document.createElement() method.
 2. Will add the ingredient name as its text content.
 3. Will add the item class to the element.
-4. Then will insert all <li> to the ul ingredients list in a single operation.
+4. Then will insert all <li> to the ul#ingredients list in a single operation.
 
 # Task 3
 
@@ -53,7 +53,7 @@ The counter consists of a span and buttons, which, when clicked, should increase
 
 # Task 5
 
-Write a script that, when typing in the name-input input (input event), substitutes its current value into span name-output. If the input is empty, the span should display the "Anonymous" string.
+Write a script that, when typing in the input#name-input input (input event), substitutes its current value into span#name-output. If the input is empty, the span should display the "Anonymous" string.
 
 # Task 6
 
@@ -66,7 +66,7 @@ To add styles, use the valid and invalid CSS classes, which you can find in the 
 
 # Task 7
 
-Write a script that responds to changes in the value of input font-size-control (input event) and changes the inline style of span text by updating the font-size property. As a result, the text size will change responding to scrollbar dragging.
+Write a script that responds to changes in the value of input#font-size-control (input event) and changes the inline style of span#text by updating the font-size property. As a result, the text size will change responding to scrollbar dragging.
 
 # Task 8
 
@@ -82,16 +82,22 @@ Write a script to manage the login form.
 
 Write a script that changes the background colors of the <body> element via inline style when clicking on button.change-color and outputs the color value to span.color.
 
-1. Use the getRandomHexColor function in task files to generate a random color.
+1. Use the getRandomHexColor function to generate a random color.
+
+function getRandomHexColor() {
+return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
 # Task 10 (optional)
 
 Write a script to create and clear a collection of elements. The user enters the number of elements into input and clicks the New button, after which a collection is rendered. When you click on the Clear button, the collection is cleared.
 
-a) Create a createBoxes(amount) function that takes one parameter, a number. The function creates as many <div> as specified in amount and adds them to div boxes.
+a) Create a createBoxes(amount) function that takes one parameter, a number. The function creates as many <div> as specified in amount and adds them to div#boxes.
 
 1. The size of the very first <div> are 30px by 30px.
 2. Each element after the first one should be 10px wider and higher than the previous one.
 3. All elements must have a random HEX background color. Use the ready-made getRandomHexColor function to get a color.
 
-b) Create a destroyBoxes() function that clears the contents of div boxes, thereby removing all created elements.
+b) Create a destroyBoxes() function that clears the contents of div#boxes, thereby removing all created elements.
