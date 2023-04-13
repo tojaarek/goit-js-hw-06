@@ -27,6 +27,8 @@ function createBoxes() {
 buttonDestroy.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
-  boxesContainer.remove('div');
-  amount.reset();
+  const boxToDestroy = boxesContainer.querySelectorAll('div');
+  boxToDestroy.forEach((item) => {
+    item.remove();
+  });
 }
