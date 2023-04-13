@@ -28,7 +28,7 @@ buttonDestroy.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
   const boxToDestroy = boxesContainer.querySelectorAll('div');
-  boxToDestroy.forEach((item) => {
-    item.remove();
+  boxToDestroy.forEach((box) => {
+    box.remove();
   });
 }
